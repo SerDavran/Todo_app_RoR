@@ -14,10 +14,8 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: 'root'
-  socket: /var/run/mysqld/mysqld.sock
-  host: 127.0.0.1
-  port: 8889
+  password: 'serafimdigital1992'
+  host: localhost
 
 development:
   <<: *default
