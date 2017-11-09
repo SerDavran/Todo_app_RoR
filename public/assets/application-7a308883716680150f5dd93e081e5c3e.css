@@ -1,0 +1,271 @@
+/* line 1, /Users/serafimntavranis/Desktop/todo/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/serafimntavranis/Desktop/todo/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/serafimntavranis/Desktop/todo/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/serafimntavranis/Desktop/todo/app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+}
+/* line 23, /Users/serafimntavranis/Desktop/todo/app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /Users/serafimntavranis/Desktop/todo/app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 33, /Users/serafimntavranis/Desktop/todo/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /Users/serafimntavranis/Desktop/todo/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /Users/serafimntavranis/Desktop/todo/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /Users/serafimntavranis/Desktop/todo/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, /Users/serafimntavranis/Desktop/todo/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /Users/serafimntavranis/Desktop/todo/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+ html{
+    height: 100%;
+ }
+
+ body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 100%;
+    background-color: #f5f5f5;
+ }
+
+ h1{
+    font-size: 100px;
+    font-weight: 100;
+    text-align: center;
+    color: rgba(175, 47, 47, 0.15);
+ }
+
+ .container{
+ 	max-width: 500px;
+ }
+
+ .centered_text{
+ 	text-align: center;
+ }
+
+ .form{
+ 	max-width: 200px;
+ 	margin: 0 auto;
+ }
+
+ .form-group{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 58px;
+    margin-bottom: 0px;
+    background-color: #FFFFFF;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+ }
+
+ .form-control{
+    font-weight: 100;
+ 	font-size: 25px;
+ 	border: 0;
+ 	border-radius: 0px;
+ 	/*border-left: 1px solid #ddd;*/
+    -webkit-box-shadow: none; 
+     box-shadow: none; 
+     -webkit-transition: none; 
+    -o-transition: none;
+     transition: none; 
+ }
+
+ .form-control:focus {
+    border-color: transparent; 
+    outline: 0;
+    -webkit-box-shadow: none; 
+    box-shadow: none; 
+}
+
+.form-control[disabled], fieldset[disabled], .form-control[readonly]{
+    background-color: transparent;
+}
+
+.form-control[disabled], fieldset[disabled] .form-control {
+    cursor: auto;
+}
+
+ .glyphicon-chevron-down{
+ 	/*font-family: 'FontAwesome';*/
+ 	/*content: "\f078";*/
+ 	cursor: pointer;
+ 	padding: 0px 15px;
+    font-size: 25px;
+ }
+
+ .list-group-item{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+ 	display: flex;
+ 	align-items: center;
+ 	justify-content: start;
+    min-height: 58px;
+ 	font-size: 25px;
+ 	line-height: 25px;
+    font-weight: 100;
+ 	word-break: break-all;
+ }
+
+ .list-group-item:hover .trash_right { display:block; }
+
+ input.input_in {
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+}
+
+.list_bottom{
+    justify-content: space-around;
+}
+
+.state, .items_left, .clear_all{
+    font-size: 14px;
+    padding: 5px;
+}
+
+.active_state{
+    padding: 5px;
+    border: 1px solid #f0d6d6;
+    border-radius: 4px;
+}
+
+.state:hover, .clear_all:hover{
+    cursor: pointer;
+}
+
+li > p{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300; 
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.readme{
+    display: flex;
+    flex-direction: column;
+    align-items: left
+}
+
+.gly-left{
+    padding-left: 10px;
+}
+
+ .glyphicon{
+ 	font-size: 25px;
+ }
+
+ .trash_right{
+    display: none;
+ 	color: #ce4242;
+ 	margin-left: auto;
+ }
+
+ .trash_right:hover{
+ 	background-color: transparent;
+ }
+
+ .glyphicon-remove{
+    color: #cc9a9a;
+ }
+
+ .glyphicon-remove:hover{
+    color: #af5b5e;
+ }
+
+ .glyphicon-unchecked:before {
+ 	cursor: pointer;
+    padding-right: 5px;
+}
+
+.glyphicon-check:before {
+	cursor: pointer;
+	color: #42ce7e;
+    padding-right: 5px;
+}
+
+.glyphicon-edit:before {
+    cursor: pointer;
+    color: #e07750;
+    padding-right: 5px;
+}

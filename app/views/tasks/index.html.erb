@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+        <h1 class="centered_text">todos</h1>
+    </div>  
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+          <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span><input type="text" class="form-control" id="new_task" placeholder="What needs to be done?" autofocus> <!-- onblur="this.focus()" -->
+        </div>
+    </div>  
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+        <ul class="list-group">
+          <% @tasks.each do |task| %>
+            <% if (task.state.id == 1) %>
+              <li id="li_<%= task.id %>" class="list-group-item state_<%= task.state_id %>">
+                <span id="<%= task.id %>" class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+                <input type="text" id="input_<%= task.id %>" class="form-control input_in" placeholder="<%= task.title %>" disabled>
+                <%= link_to '<i class="glyphicon glyphicon-remove"></i>'.html_safe, task, method: :delete, class: 'trash_right' %>
+              </li>
+            <% elsif (task.state.id == 2) %>
+              <li id="li_<%= task.id %>" class="list-group-item state_<%= task.state_id %>">
+                <span id="<%= task.id %>" class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                <input type="text" id="input_<%= task.id %>" class="form-control input_in" placeholder="<%= task.title %>" disabled> 
+                <%= link_to '<i class="glyphicon glyphicon-remove"></i>'.html_safe, task, method: :delete, class: 'trash_right' %>
+              </li>
+            <% else %>
+              <li id="li_<%= task.id %>" class="list-group-item state_<%= task.state_id %>">
+                <span id="<%= task.id %>" class="glyphicon glyphicon-check" aria-hidden="true"></span> 
+                <input type="text" id="input_<%= task.id %>" class="form-control input_in" placeholder="<%= task.title %>" disabled>
+                <%= link_to '<i class="glyphicon glyphicon glyphicon-remove"></i>'.html_safe, task, method: :delete, class: 'trash_right' %>
+              </li>
+            <% end %>
+          <% end %>
+          <li class="list-group-item list_bottom"> 
+            <div class="items_left"><%= @left %></div>
+            <div class="states">
+                <span class="state active_state" id="state_0">All</span>
+              <% @states.each do |state| %>
+                <span class="state" id="state_<%= state.id %>"><%= state.title %></span>
+              <% end %>
+            </div>
+            <div class="clear_all">Clear complited</div>
+          </li>
+          <li class="list-group-item readme">
+            <p>
+              Με κλίκ στο <span class="gly-left glyphicon glyphicon-unchecked"></span> ---> <span class="gly-left glyphicon glyphicon-check"></span>
+            </p>
+            <p>
+              Με κλίκ στο <span class="gly-left glyphicon glyphicon-check"></span> ---> <span class="gly-left glyphicon glyphicon-unchecked"></span>
+            </p>
+            <p>
+              Με κλίκ στο <span class=" gly-left glyphicon glyphicon-edit"></span> ---> <span class="gly-left glyphicon glyphicon-check"></span>
+            </p>
+            <p>
+              Με δεξι κλίκ στο <span class="gly-left glyphicon glyphicon-check"></span> ή <span class="gly-left glyphicon glyphicon-unchecked"></span> ---> <span class=" gly-left glyphicon glyphicon-edit"></span>
+            </p>
+          </li>
+        </ul>
+    </div>  
+  </div>
+</div>
+
+<%
+=begin %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table>
+        
+
+        <tbody>
+          <% @tasks.each do |task| %>
+            <tr>
+              <td><%= task.title %></td>
+              <td><%= task.state.title %></td>
+              <td><%= link_to 'Show', task %></td>
+              <td><%= link_to 'Edit', edit_task_path(task) %></td>
+              <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>  
+  </div>
+</div>
+
+<%= link_to 'New Task', new_task_path %>
+
+<%
+=end %>
