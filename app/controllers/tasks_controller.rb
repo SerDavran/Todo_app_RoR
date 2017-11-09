@@ -75,7 +75,8 @@ class TasksController < ApplicationController
     state = Task.update_all_json
     count_left
     respond_to do |format|
-      format.json { render json: state.to_json }
+      format.json { render json: {:state => state.to_json, 
+                                  :left => @left }}
     end
   end
 

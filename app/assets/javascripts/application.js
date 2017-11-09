@@ -97,9 +97,9 @@ $(document).ready(function() {
         url: "update_all",
         dataType: "json",
           success: function(data) {
-            //alert(data);
+            //console.log(data);
             $( "li span" ).each(function() {
-              if (data == 1){//Active
+              if (data.state == 1){//Active
                 if ( ( $(this).hasClass("glyphicon-check") || $(this).hasClass("glyphicon-edit") ) && !($(this).hasClass("gly-left")) ){
                   $( this ).removeClass('glyphicon-check glyphicon-edit');
                   $( this ).parent().removeClass('state_2 state_3');
@@ -114,6 +114,8 @@ $(document).ready(function() {
                   $( this ).parent().addClass('state_3');
                 }
               }
+              $(".items_left").empty();
+              $("<span>"+data.left+"</span>").prependTo(".items_left");
             });
           },
           error: function(data) { 
