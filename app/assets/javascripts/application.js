@@ -100,14 +100,14 @@ $(document).ready(function() {
             //alert(data);
             $( "li span" ).each(function() {
               if (data == 1){//Active
-                if ( $(this).hasClass("glyphicon-check") || $(this).hasClass("glyphicon-edit") ){
+                if ( ( $(this).hasClass("glyphicon-check") || $(this).hasClass("glyphicon-edit") ) && !($(this).hasClass("gly-left")) ){
                   $( this ).removeClass('glyphicon-check glyphicon-edit');
                   $( this ).parent().removeClass('state_2 state_3');
                   $( this ).addClass('glyphicon-unchecked');
                   $( this ).parent().addClass('state_1');
                 }
               }else{//Complited
-                if ( $(this).hasClass("glyphicon-unchecked") || $(this).hasClass("glyphicon-edit") ){
+                if ( ( $(this).hasClass("glyphicon-unchecked") || $(this).hasClass("glyphicon-edit") ) && !($(this).hasClass("gly-left")) ){
                   $( this ).removeClass('glyphicon-unchecked glyphicon-edit');
                   $( this ).parent().removeClass('state_1 state_2');
                   $( this ).addClass('glyphicon-check');
